@@ -1,0 +1,32 @@
+.intro {
+    display: flex;
+    color: $white;
+    color:  rgba($white, .7);
+
+    h2 {
+        color: $white
+    }
+
+    @supports (display: grid) {
+        display: grid;
+        grid-template-columns: minmax(2em, 1fr) minmax(auto, 3fr) minmax(2em, 1fr);
+
+    }   
+    // ne trinh duyet ho tro css grid
+}
+
+.intro-middle {
+    background: $dark-blue;
+    padding:  2.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.intro-left img,
+.intro-right img {
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+}

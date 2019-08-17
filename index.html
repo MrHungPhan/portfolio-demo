@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./scss/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#contact">portfolio</a></li>
+        </ul>
+    </nav>
+
+    <div class="container-all">
+        <div class="wellcome" id="home">
+            <div class="menu-button">
+                <svg class="hamburger" x="0px" y="0px"
+                viewBox="0 0 30 17" height="17" width="30" >
+                    <g transform="translate(-15 -15)">
+                    <rect x="15" y="16" class="st0" width="30" height="2"/>
+                    </g>
+                    <g transform="translate(-15 -9)">
+                    <rect x="15" y="16" class="st0" width="30" height="2"/>
+                    </g>
+                    <g transform="translate(-15 -3)">
+                    <rect x="15" y="16" class="st0" width="30" height="2"/>
+                    </g>
+                </svg>
+                <svg class="close-icon" x="0px" y="0px"
+                viewBox="0 0 30 17" height="17" width="30">
+                <g transform="translate(-15 -15)">
+                <polygon class="st0" points="31.2,23.5 37,29.3 35.8,30.5 30,24.7 24.2,30.5 23,29.3 28.8,23.5 23,17.7 24.2,16.5 30,22.3 
+                    35.8,16.5 37,17.7 	"/>
+                </g>
+                </svg>   
+            </div>
+            <h1>Wellcome to my <span>Portfolio</span></h1>
+        </div>
+
+        <section class="intro">
+            <div class="intro-left">
+                <img src="./img/welcome-01.png" alt="">
+            </div>
+            <div class="intro-middle">
+                <h2>Making it happen</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non doloremque quam magnam, amet quae atque suscipit facere eius earum assumenda aliquam ipsam recusandae eos quibusdam voluptatem reprehenderit quasi voluptatum id.</p>
+            </div>
+            <div class="intro-right">
+                <img src="./img/welcome-02.png" alt="">
+            </div>
+        </section>
+
+        <section class="about-me" id="about">
+            <img class="about-img" src="./img/joe-portfolio.png" alt="">
+            <h1 class="about-title">Joe Portfolio</h1>
+            <h2 class="about-subtitle">Designer & Developer</h2>
+            <div class="about-text">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum officia placeat quas doloremque, eaque adipisci ut veniam consequuntur dolorum quidem? Voluptate reiciendis illum, recusandae consequatur officia at odio minus a.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis officiis cum quod esse reiciendis accusamus aliquid quasi corrupti, ipsam accusantium deserunt, assumenda veniam exercitationem placeat libero non, modi recusandae. Adipisci.</p>
+            </div>
+        </section>
+
+        <section class="portfolio" id="portfolio">
+            <h1>My work</h1>
+            <!-- Portfolio Items -->
+            <div class="portfolio-items">
+                <!-- portfolio item 1 -->
+                <figure class="portfolio-item featured">
+                    <img src="./img/portfolio-01.jpg" alt="">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project name</h2>
+                        <p class="portfolio-des">A short description for my portfolio</p>
+                        <a href="#" class="portfolio-link">Read more</a>    
+                    </figcaption>
+                </figure>
+
+                <!-- portfolio item 2 -->
+                <figure class="portfolio-item">
+                    <img src="./img/portfolio-02.jpg" alt="">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project name</h2>
+                        <p class="portfolio-des">A short description for my portfolio</p>
+                        <a href="#" class="portfolio-link">Read more</a>    
+                    </figcaption>
+                </figure>
+
+                <!-- portfolio item 3 -->
+                <figure class="portfolio-item">
+                    <img src="./img/portfolio-03.jpg" alt="">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project name</h2>
+                        <p class="portfolio-des">A short description for my portfolio</p>
+                        <a href="#" class="portfolio-link">Read more</a>    
+                    </figcaption>
+                </figure>
+
+                    <!-- portfolio item 4 -->
+                <figure class="portfolio-item">
+                    <img src="./img/portfolio-04.jpg" alt="">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project name</h2>
+                        <p class="portfolio-des">A short description for my portfolio</p>
+                        <a href="#" class="portfolio-link">Read more</a>    
+                    </figcaption>
+                </figure>
+
+                <!-- portfolio item 5 -->
+                <figure class="portfolio-item">
+                    <img src="./img/portfolio-05.jpg" alt="">
+                    <figcaption>
+                        <h2 class="portfolio-title">Project name</h2>
+                        <p class="portfolio-des">A short description for my portfolio</p>
+                        <a href="#" class="portfolio-link">Read more</a>    
+                    </figcaption>          
+                </figure>
+                
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <h1>Contact me</h1>
+            <form action="">
+                <label for="name" class="name">Name :
+                    <input type="text" id="name">
+                </label>
+
+                <label for="email" class="email">Email :
+                    <input type="email" name="email" id="email">
+                </label>
+
+                <label for="message" class="message">Message :
+                    <textarea name="message" id="message"></textarea>
+                </label>
+
+                <button type="submit" value="send" class="btn">send</button>
+
+            </form>
+        </section>
+
+        <footer>
+            <p>
+                Follow me on social
+            </p>
+            <div class="social-icons">
+                <img class="social-icon" src="./img/twitter.svg" alt="">
+                <img class="social-icon" src="./img/instagram.svg" alt="">
+                <img class="social-icon" src="./img/github.svg" alt="">
+            </div>
+            
+            <p class="copy-right"> Coppywrite 2019 Joe Portfolio</p>
+        </footer>
+    </div>
+    <script src="./js/nav.js"></script>
+    <script src="./js/portfolio.js"></script>
+</body>
+</html>

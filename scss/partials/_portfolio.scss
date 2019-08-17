@@ -1,0 +1,147 @@
+.portfolio {
+    text-align: center;
+    background: $light-gray;
+    padding: 5em 0;
+}
+
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include container($mw : 60em);
+
+
+    // @for $i from 1 through  5 {
+    //     .portfolio-item:nth-child(#{$i}) > figcaption{
+    //             // animation
+    //         animation-name: autoAppent;
+    //         animation-duration: 2s;
+    //         animation-iteration-count: initial;
+    //         animation-timing-function: ease-in-out;
+    //         animation-delay: #{$i * 2}s;
+    //     }
+    // }
+   
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    flex: 1 1 20rem;
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    figcaption {
+        position: absolute;
+        top : 100%;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 2em;
+        background: rgba($accent, .75);
+        color: $white;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        transition: top ease-in-out 250ms;
+
+       
+    }
+
+ 
+
+    &:hover figcaption,
+    &:focus figcaption {
+        top: 0;
+    }
+}
+
+// key frame
+@keyframes autoAppent {
+    0% {
+        top: 100%;
+    }
+
+    50% {
+        top : 0%;
+    }
+
+    100% {
+        top : -200%
+    }
+}
+
+// end key frame
+
+.portfolio-title {
+    color : $white;
+    font-size: 1.8rem;
+    margin-bottom: auto;
+}
+
+.portfolio-link {
+    color: $white;
+    font-weight: $fw-b;
+    font-size: .8rem;
+    border-bottom: 2px solid $white;
+    align-self: flex-start;
+    text-decoration: none;
+
+    &::after {
+        content: url('../../img/arrow-white.svg');
+        height: 1em; 
+        display: inline-block;
+        width: 1em;
+        margin-left: .5em;
+        
+    }
+}
+
+.portfolio-des {
+    display: none;
+}
+
+// if trinh duyrt ho tro css grid 
+@supports (display: grid) {
+    .portfolio-items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include media {
+            grid-template-columns: repeat(4, 1fr);
+            @include container($mw : 50em);
+            
+
+        }
+    }
+
+    .portfolio-item.featured {
+        grid-column: span 2;
+        grid-row: 1 / span 2;
+    }
+
+    .portfolio-title {
+        @include media {
+            font-size: 2em;
+        }
+
+        .featured & {
+            font-size: 5em;
+        }
+    }
+
+    .portfolio-des {
+        .featured & {
+            display: block
+        }
+    }
+
+    .portfolio-link {
+        .featured & {
+            font-size: 1.2em;
+        }
+    }
+}

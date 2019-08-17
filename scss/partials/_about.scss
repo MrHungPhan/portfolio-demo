@@ -1,0 +1,62 @@
+.about-me {
+    @include container;
+    // add clear both beacause I did float left image
+    // add pesudo ::after on about-me : display : block, clear : both
+    @include clearfix;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.about-subtitle {
+    margin: .5em 0;
+}
+
+.about-img {
+    @media (min-width : 42em){
+        float: left;
+        margin-right: 1em;
+    }
+    
+}
+
+// if brower support css grid
+@supports (display: grid) {
+    .about-me {
+        display: grid;
+        grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+
+        @include media {
+            grid-column-gap: 1em;
+        }
+
+    }
+
+    .about-img {
+        grid-column: port-start / img-end; // 2 cot
+        grid-row: 1 / 2; // 1 hang
+
+        @include media {
+            grid-row : 1 / 4;
+            width: 100%;
+        }
+    }
+
+    .about-title {
+        grid-column: name-start / port-end;
+        grid-row: 1 / 2;
+        align-self: end; // nen content lai theo flow
+        margin-bottom: .5em;
+    }
+
+    .about-subtitle, .about-text {
+        grid-column: 1 / -1;
+
+        @include media {
+            grid-column: img-end / port-end
+        }
+    }
+
+    .about-subtitle {
+        margin: .5em 0
+    }
+} // neu trinh duyet ho tro css grid
