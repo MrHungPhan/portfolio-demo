@@ -4,7 +4,16 @@
     color:  rgba($white, .7);
 
     h2 {
-        color: $white
+        color: $white;
+
+        &::after {
+            content: '';
+            width: 20%;
+            height: 1px;
+            background: rgba($white, .5);
+            display: block;
+            margin: 1em auto 0
+          }
     }
 
     @supports (display: grid) {

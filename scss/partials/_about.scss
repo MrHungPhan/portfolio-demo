@@ -11,7 +11,15 @@
     margin: .5em 0;
 }
 
+.about-title {
+    margin-bottom: .25em;  
+  }
+  
+
 .about-img {
+    max-height: 25em;
+    border-radius: 50%;
+
     @media (min-width : 42em){
         float: left;
         margin-right: 1em;

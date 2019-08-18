@@ -1,14 +1,16 @@
 const menuBtn = document.querySelector('.menu-button');
-const linksMenu = document.querySelectorAll('nav a');
+const nav = document.querySelector('nav');
+const containerAll = document.querySelector('.container-all');
 
-menuBtn.addEventListener('click', _ => {
-    document.body.classList.toggle('nav-is-open')
+menuBtn.addEventListener('click', _ => {   
+    containerAll.style.transition = "transform 250ms ease-in-out"
+    document.body.classList.toggle('nav-is-open');
 });
 
-linksMenu.forEach(link => { 
-    link.addEventListener('click', _ => {
-        document.body.classList.remove('nav-is-open');
-    })
+
+nav.addEventListener('click', _ => {
+    containerAll.style.transition = '0ms'
+    document.body.classList.remove('nav-is-open');
 })
 
 

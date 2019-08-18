@@ -3,6 +3,11 @@ body {
     font-family: $ff-s;
     line-height : 1.5;
     background: $white;
+    overflow-x: hidden;
+
+    @include media {
+        font-size: 1.125rem;
+      }
 }
 
 img {
@@ -33,7 +38,7 @@ p {
 }
 
 h2 {
-    @include sans-serif($fs: 1.7rem, $ls : .4rem);
+    @include sans-serif($fs: 2rem, $ls : .15em);
 
     @include media {
         font-size: 2.5em;
